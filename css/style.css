@@ -1,0 +1,401 @@
+body{
+	font-family: 'Dosis', sans-serif;
+	color: #353839;
+}
+
+h1{
+	font-size: 3rem;
+}
+
+nav{
+  max-width: 345px;
+  height: 100%;
+	position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+  background-color: #FFF;
+  -webkit-transition: all .4s;
+  -o-transition: all .4s;
+  transition: all .4s;
+}
+
+.hide-robot{
+  display:none;
+}
+
+.new{
+  color: #DAA520;
+  margin-left:5px;
+}
+
+.white-bkgr{
+  background-color: #FFF;
+}
+
+.collapsed-nav nav{
+	max-width: 60px;
+}
+
+.nav-controls{
+	height: 65px;
+	width: calc(100% - 1rem);
+	background-color: #FFF;
+    position: absolute;
+    z-index: 3;
+}
+
+.nav-controls .home-btn{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.collapsed-nav .nav-controls .home-btn{
+	display: none;
+}
+
+.nav-controls .home-btn:hover{
+	text-decoration: none;
+}
+
+.menu-toggle {
+	cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.nav-controls .menu-toggle span{
+  width: 30px;
+  height: 2px;
+	display: block;
+	background-color: #ccc;
+	margin: 6px 0;
+	transition: 0.4s;
+}
+
+.nav-controls .menu-toggle.open .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-8px, 6px);
+  transform: rotate(-45deg) translate(-8px, 6px);
+}
+
+.nav-controls .menu-toggle.open .bar2 {opacity: 0;}
+
+.nav-controls .menu-toggle.open .bar3 {
+  -webkit-transform: rotate(45deg) translate(-4px, -4px);
+  transform: rotate(45deg) translate(-4px, -4px);
+}
+
+.nav-item{
+	width: 100%;
+	margin-bottom: 0.2rem;
+	border-bottom: 1px solid #f2f2f2;
+	padding-bottom: 0.5rem;
+	display: inline-block;
+	text-transform: uppercase;
+	font-size: 1rem;
+	cursor: pointer;
+}
+
+.main-menu{
+	-webkit-transition: opacity .25s linear;
+	transition: opacity .25s linear;
+}
+
+.collapsed-nav .main-menu{
+	opacity: 0;
+}
+
+.main-menu .nav-item:first-of-type{
+	margin-top: 65px;
+}
+
+.main-menu .nav-item:first-of-type .nav-link{
+	padding-top: 0;
+}
+
+.submenu{
+	-webkit-transition: all .3s ease-out;
+	transition: all .3s ease-out;
+}
+
+.nav-item a{
+  color: #353839;
+}
+
+.nav-item.all:hover, .nav-item.all.active, .nav-item.all a{
+  color: #007bff;
+}
+
+.nav-item.ep-1:hover, .nav-item.ep-1.active, .nav-item.ep-1 a{
+	color: #c0113a;
+}
+
+.nav-item.ep-2:hover, .nav-item.ep-2.active , .nav-item.ep-2 a{
+	color: #ff9b7c;
+}
+
+.nav-item.ep-3:hover, .nav-item.ep-3.active, .nav-item.ep-3 a{
+	color: #88c2ff;
+}
+
+.nav-item.ep-4:hover, .nav-item.ep-4.active, .nav-item.ep-4 a{
+	color: #1fcdd1;
+}
+
+.nav-item.ep-5:hover, .nav-item.ep-5.active, .nav-item.ep-5 a{
+	color: #94cb88;
+}
+
+.nav-item.ep-6:hover, .nav-item.ep-6.active, .nav-item.ep-6 a{
+	color: #d491d5;
+}
+
+.nav-item.ep-7:hover, .nav-item.ep-7.active, .nav-item.ep-7 a{
+	color: #fed68c;
+}
+
+.nav-item a{
+  display: block;
+  width: 100%;
+}
+
+.nav-link{
+	padding-bottom: 0;
+}
+
+.nav-link .episode-info{
+	vertical-align: middle;
+}
+
+.nav-link .episode-title{
+	text-transform: none;
+}
+
+.submenu-menu{
+	max-height: 0;
+	margin-left: 55px;
+	padding-left: 1.5rem;
+    list-style: none;
+    font-size: 1rem;
+    overflow: hidden;
+    -webkit-transition: max-height 0.35s ease-in-out;
+    -o-transition: max-height 0.35s ease-in-out;
+    transition: max-height 0.35s ease-in-out;
+}
+
+.submenu-menu.active{
+    max-height: 100vh;
+}
+
+.submenu-menu li{
+	text-transform: none;
+	margin-bottom: 0.5rem;
+}
+
+.submenu-menu li:hover{
+	font-weight: 600;
+}
+
+.submenu-menu li a:hover{
+	text-decoration: none;
+}
+
+.main-content{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.content-column{
+    width: calc(100% - 345px);
+    height: 100%;
+}
+
+.collapsed-nav .content-column{
+	width: calc(100% - 60px);
+}
+
+/*homepage styles */
+
+main.home{
+	height: 100vh;
+	padding: 0;
+	overflow: hidden;
+}
+
+.blue-overlay{
+	background: linear-gradient(rgba(139, 180, 175, 0.5), rgba(139, 180, 175, 0.5));
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.img-slide{
+    position: relative;
+	-webkit-transition: background 2s ease-in-out;
+	transition: background 2s ease-in-out;
+	z-index: -1;
+	overflow: hidden;
+}
+
+.home-content{
+	width: 60%;
+	color: #FFF;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.home-content h1{
+	text-transform: uppercase;
+	font-weight: 600;
+}
+
+.home-content p{
+	font-size: 1.3rem;
+	font-style: italic;
+}
+
+/*page styles */
+.page{
+	background-color: #f2f2f2;
+	padding:0;
+}
+
+.page .container-fluid{
+    background-color: #f2f2f2;
+}
+
+.media-block{
+	vertical-align: middle;
+	background-color: #FFF;
+}
+
+.media-block img, .media-block p{
+	width: 90%;
+	margin: 0 auto;
+	display: block
+}
+
+.media-block img{
+	cursor: pointer;
+  	transition: 0.3s;
+}
+
+.media-block video{
+  display: block;
+  margin: 0 auto;
+  max-width: 320px;
+  width: 100%;
+}
+
+.media-block video.large{
+  max-width: 640px;
+}
+
+.media-block img:hover {
+	opacity: 0.7;
+}
+
+.episode-1 h2{
+	color: #c0113a;
+}
+
+.episode-2 h2{
+  color: #ff9b7c;
+}
+
+.episode-3 h2{
+  color: #88c2ff;
+}
+
+.episode-4 h2{
+  color: #1fcdd1;
+}
+
+.episode-5 h2{
+  color: #94cb88;
+}
+
+.episode-6 h2{
+  color: #d491d5;
+}
+
+.episode-7 h2{
+  color: #fed68c;
+}
+
+img.full_cover{
+    display: block;
+    margin: 0 auto;
+    height: 100vh;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Add Animation */
+.modal-content {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+.modal .close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.modal .close:hover,
+.modal .close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
